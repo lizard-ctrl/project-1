@@ -18,6 +18,7 @@ virgo_list = [ " I'm such a virgo lol!" ,
                 " so glad i woke up today as a virgo!",
                 " virgos do it the best",
                 " thank god im a virgo!"
+
                 ]
 
 
@@ -29,11 +30,13 @@ virgo = virgo_list[random_number]
 
 
 
-search_results = api.search( q= "lol", lang="en" )
+search_results = api.search( q= "lol", lang="en", tweet_mode="extended")
 random_number = random.randrange( len(search_results) )
 random_tweet = search_results[random_number]
-oldtweet = random_tweet.text
+oldtweet = random_tweet.full_text
+
 
 
 api.update_status(oldtweet + virgo)
 print("Done.")
+
