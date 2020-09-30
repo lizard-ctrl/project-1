@@ -35,6 +35,5 @@ random_tweet = search_results[random_number]
 oldtweet = random_tweet.text
 
 
-
 api.update_status(oldtweet + virgo)
 print("Done.")
